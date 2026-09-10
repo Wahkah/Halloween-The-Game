@@ -102,6 +102,8 @@ def build_section(b):
     why = ''.join(f'<p>{e(x)}</p>' for x in b['why'])
     play = ''.join(f'<li>{e(x)}</li>' for x in b['play'])
     wpn, itm, lnote = b['loadout']
+    note_html = (f'<div class="panel note"><p>{e(b["deck_note"])}</p></div>'
+                 if b.get('deck_note') else '')
     return f'''
 <section class="build" id="{b['slug']}">
   <div class="build-head"><h2>{e(civ)}</h2>{tag}</div>
@@ -127,6 +129,7 @@ def build_section(b):
     <tbody>{rows}</tbody>
   </table></div>
 
+  {note_html}
   <h4>Swaps</h4>
   <ul>{swaps}</ul>
 
