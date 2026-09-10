@@ -144,20 +144,28 @@ BLURBS = {
 #   perk -> {rarity: percentage}
 VALUES = {
  "Slippery":         {"Common": 15, "Uncommon": 20, "Epic": 30},
- "Reveler":          {"Common": 15, "Rare": 50},
+ "Reveler":          {"Common": 15, "Rare": 50, "Legendary": 100},
  "Aura of Awareness": {"Common": 15, "Rare": 20},
- "Unwinded":         {"Common": 10},
+ "Unwinded":         {"Common": 10, "Uncommon": 15, "Legendary": 35},
  "Knockout":         {"Common": 10},
  "Contender":        {"Common": 5},
  "Solid Foundation": {"Common": 5},
 }
 NUMERALS = {"Common": "I", "Uncommon": "II", "Rare": "III", "Epic": "IV", "Legendary": "V"}
 LADDER_NOTE = (
- "Cards carry a numeral for their tier, I through V, matching Common through Legendary. "
- "Every card scales on its own curve, and the tier I figure predicts nothing about it. Three "
- "cards all read 15% at tier I. By tier III, Aura of Awareness has reached 20, Slippery is on "
- "track for 25, and Reveler is at 50. Same starting point, a two and a half times spread two "
- "tiers later.")
+ "Cards carry a numeral for their tier, I through V, matching Common through Legendary. Every "
+ "card scales on its own curve, and the tier I figure predicts nothing about it. Three cards "
+ "all read 15% at tier I. By III, Aura of Awareness has reached 20 and Reveler is at 50, and "
+ "by V Reveler is at 100.")
+SHAPE_NOTE = (
+ "The curves are not straight either. Reveler climbs 17.5 points a tier from I to III and then "
+ "25 a tier from III to V, finishing at 100 where a straight line off its lower half would have "
+ "put it at 85. Unwinded does the same thing more gently, 5 a tier then 6.7, ending at 35 where "
+ "a line predicted 30. Slippery is the exception so far and runs straight at 5 a tier from I to "
+ "IV, though its V has never been seen and may jump like the others. So the shape varies per "
+ "card as well as the steepness, and the practical read is that tier V is worth "
+ "disproportionately more than the tiers under it. The step from IV to V is the biggest step "
+ "on every card measured.")
 LADDER_RULE = (
  "So a figure at one tier says nothing about the same card at another tier, and nothing at "
  "all about a different card. Only measured figures appear below. A blank is a blank and "
@@ -171,6 +179,10 @@ UPGRADE_STRATEGY = (
  "is one shot, buying a cheaper option spends your only upgrade on a worse destination, which "
  "makes every price below the top one a trap. Either go to V or leave the card alone. "
  "Reported from play rather than measured here.")
+UPGRADE_MEASURED_PRICE = (
+ "One price has been seen: 3,818 points took a Reveler from III to V. So the cost depends on "
+ "how far you are jumping and not only on the destination, and an upgrade from I would cost "
+ "more than that.")
 UPGRADE_VS_ROLL = (
  "There is a larger question underneath that one. An upgrade expires after a few matches and "
  "a roll is permanent, so 4,000 points spent upgrading is 4,000 points not spent on rolls that "
