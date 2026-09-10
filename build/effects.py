@@ -143,21 +143,55 @@ BLURBS = {
 # its wording, so unlike the descriptions above they are reported as observed.
 #   perk -> {rarity: percentage}
 VALUES = {
- "Slippery":         {"Common": 15, "Uncommon": 20, "Epic": 30},
- "Reveler":          {"Common": 15, "Rare": 50, "Legendary": 100},
- "Aura of Awareness": {"Common": 15, "Uncommon": 20, "Rare": 25},
- "Unwinded":         {"Common": 10, "Uncommon": 15, "Legendary": 35},
- "Knockout":         {"Common": 10},
- "Shared Desperation": {"Rare": 30, "Epic": 40},
- "Contender":        {"Common": 5},
- "Solid Foundation": {"Common": 5},
+ "Reveler":               {"Common": 15, "Rare": 50, "Legendary": 100},
+ "Voice of Reason":       {"Common": 50},
+ "Shared Desperation":    {"Common": 15, "Rare": 30, "Epic": 40},
+ "Exit Strategy":         {"Common": 25, "Uncommon": 35},
+ "Unwinded":              {"Common": 10, "Uncommon": 15, "Legendary": 35},
+ "Silver Tongue":         {"Rare": 30},
+ "Slippery":              {"Common": 15, "Uncommon": 20, "Epic": 30},
+ "Aura of Awareness":     {"Common": 15, "Uncommon": 20, "Rare": 25},
+ "Frantic":               {"Uncommon": 25},
+ "Brutal Cleave":         {"Rare": 20},
+ "Grave Footing":         {"Common": 20},
+ "Lethal Pitch":          {"Uncommon": 20},
+ "Panic Drive":           {"Common": 20},
+ "Repair Expert":         {"Common": 20},
+ "Shield of Law":         {"Uncommon": 20},
+ "Fade to Black":         {"Common": 15},
+ "Field Triage":          {"Common": 10},
+ "Glass Walker":          {"Common": 10},
+ "Guardian Shadow":       {"Common": 10},
+ "Hardened":              {"Common": 10},
+ "Iron Ankles":           {"Common": 10},
+ "Knockout":              {"Common": 10},
+ "Liquid Courage":        {"Common": 5, "Uncommon": 10},
+ "Smooth Talker":         {"Common": 10},
+ "Stubborn":              {"Common": 10},
+ "Witness State":         {"Common": 10},
+ "Wound Mender":          {"Common": 5, "Uncommon": 10},
+ "Adrenaline":            {"Common": 8},
+ "Contender":             {"Common": 5},
+ "Solid Foundation":      {"Common": 5},
+ "Wired":                 {"Common": 3},
+ "Panic Contagion":       {"Common": 2},
+ "Elusory":               {"Common": 1},
 }
+METRE_VALUES = {"Witness State"}          # figure is a distance in metres, not a per cent
+FLAT_CONFIRMED = {"Pied Piper": "II and V read the same",
+                  "Survival Intuition": "II and III read the same as V"}
+TIER_UNCONFIRMED = {"Hardened": "reported without a tier; recorded here as I"}
 NUMERALS = {"Common": "I", "Uncommon": "II", "Rare": "III", "Epic": "IV", "Legendary": "V"}
 LADDER_NOTE = (
- "Cards carry a numeral for their tier, I through V, matching Common through Legendary. Every "
- "card scales on its own curve, and the tier I figure predicts nothing about it. Three cards "
- "all read 15% at tier I. Two of them, Slippery and Aura of Awareness, then climb five points "
- "a tier in step with each other. The third is Reveler, which reaches 50 by III and 100 by V.")
+ "Cards carry a numeral for their tier, I through V, matching Common through Legendary. What "
+ "a tier does not do is tell you the size of an effect. Across the cards measured at tier I "
+ "the figures run from 1% on Elusory to 50% on Voice of Reason, a fifty fold spread at one "
+ "and the same rarity. Each card is calibrated on its own scale, so a Common of a big card "
+ "beats a Legendary of a small one and the numbers cannot be compared between cards at all.")
+SPREAD_NOTE = (
+ "The figures are not even multiples of five. Adrenaline reads 8, Wired 3, Panic Contagion 2 "
+ "and Elusory 1, which rules out the neat ladder an earlier version of this page proposed.")
+SHAPE_NOTE_INTRO = ""
 SHAPE_NOTE = (
  "Three of the four cards measured at more than two tiers climb five points a tier through "
  "their lower half: Slippery from I to IV, Aura of Awareness from I to III, and Unwinded from "

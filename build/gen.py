@@ -172,10 +172,14 @@ cats = sorted({R.CATEGORY[n] for n in E.PERKS}, key=lambda c: list(R.CATEGORY_LA
 btns = ''.join(f'<button data-cat="{c}" aria-pressed="false">{e(R.CATEGORY_LABEL[c])}</button>'
                for c in cats)
 
+def unit(n):
+    return 'm' if n in E.METRE_VALUES else '%'
+
 def measured(n):
     v = E.VALUES.get(n)
     if not v: return '<span style="color:var(--ink-faint)">&mdash;</span>'
-    return ' '.join(f'<span class="mono">{r[:4]} {p}%</span>' for r, p in v.items())
+    u = unit(n)
+    return ' '.join(f'<span class="mono">{E.NUMERALS[r]} {p}{u}</span>' for r, p in v.items())
 
 def perk_row(n):
     d, sc = E.PERKS[n][0], E.PERKS[n][1]
@@ -190,7 +194,7 @@ def perk_row(n):
 def ladder_cell(n, t):
     v = E.VALUES[n]
     if t in v:
-        return f'<td class="num" style="color:var(--pumpkin);font-weight:700">{v[t]}%</td>'
+        return f'<td class="num" style="color:var(--pumpkin);font-weight:700">{v[t]}{unit(n)}</td>'
     return '<td class="num" style="color:var(--ink-faint)">&mdash;</td>'
 
 def rate_row(n):
@@ -209,7 +213,8 @@ def rate_row(n):
         shape = f'flattens, +{segs[0]:.1f} then +{segs[-1]:.1f} per tier'
     else:
         shape = 'straight so far'
-    span = f'{v[lo]}% at {E.NUMERALS[lo]} to {v[hi]}% at {E.NUMERALS[hi]}'
+    u = unit(n)
+    span = f'{v[lo]}{u} at {E.NUMERALS[lo]} to {v[hi]}{u} at {E.NUMERALS[hi]}'
     best = max((max(vv.values()) - min(vv.values())) /
                (R.RARITY.index(max(vv, key=lambda t: R.RARITY.index(t)))
                 - R.RARITY.index(min(vv, key=lambda t: R.RARITY.index(t))))
@@ -290,6 +295,7 @@ figure, which is how the arrest gets the police it needs.</p>
 <h2>The rarity ladder</h2>
 <p>Five tiers: {' &middot; '.join(R.RARITY)}.</p>
 <p>{e(E.LADDER_NOTE)}</p>
+<p>{e(E.SPREAD_NOTE)}</p>
 <p>{e(E.SHAPE_NOTE)}</p>
 <p>{e(E.LADDER_RULE)}</p>
 <p class="count">Every figure below was read off a card in game. Nothing is projected.</p>
