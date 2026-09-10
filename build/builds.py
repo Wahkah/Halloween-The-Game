@@ -71,7 +71,7 @@ BUILDS = [
  ],
  "deck": [
   ("Unphased", "Fear buildup reduced, which keeps Spatial Awareness switched on."),
-  ("Wired", "Every Pop you drink permanently reduces incoming fear. It stacks across the match."),
+  ("Wired", "Every Pop you drink permanently reduces incoming fear, and it stacks for the rest of the match. It reads 3% at tier I and 7% at II, which looks negligible until you notice it is per can: four cans at tier II is 28% and no cap is stated. Laurie needs to stay calm for her trait to work at all, so this is the card that funds it."),
   ("Deaden", "Quieter noise pings. Michael's whole tracking layer is noise."),
   ("Fade to Black", "Hiding spots degrade Stalk faster, so hiding is progress rather than a pause."),
   ("Slippery", "Insurance for the times the stealth fails."),

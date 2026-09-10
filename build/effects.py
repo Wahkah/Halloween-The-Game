@@ -173,10 +173,20 @@ VALUES = {
  "Adrenaline":            {"Common": 8},
  "Contender":             {"Common": 5},
  "Solid Foundation":      {"Common": 5},
- "Wired":                 {"Common": 3},
+ "Wired":                 {"Common": 3, "Uncommon": 7},
  "Panic Contagion":       {"Common": 2},
  "Elusory":               {"Common": 1},
 }
+STACKING = {"Wired": "Each Pop consumed adds another instance, and it lasts the rest of the match. "
+                     "No cap is stated, so the figure below is per Pop rather than a total.",
+            "Revenge": "Each nearby death adds an instance, capped at five, so the figure below is "
+                       "a fifth of what it reaches when fully stacked."}
+STACKING_NOTE = (
+ "Two cards stack, which makes their figures look far smaller than they play. Wired reads 3% at "
+ "tier I and 7% at II, near the bottom of the table, but that is per can of pop and it holds for "
+ "the rest of the match with no stated cap. Four cans at tier II is 28%. Revenge is capped at "
+ "five stacks, so its number is a fifth of its ceiling. Read both as a rate rather than a total, "
+ "and do not rank them against the flat cards on the raw figure.")
 METRE_VALUES = {"Witness State"}          # figure is a distance in metres, not a per cent
 FLAT_CONFIRMED = {"Pied Piper": "II and V read the same",
                   "Survival Intuition": "II and III read the same as V"}

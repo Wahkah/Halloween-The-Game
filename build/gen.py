@@ -183,7 +183,7 @@ def measured(n):
 
 def perk_row(n):
     d, sc = E.PERKS[n][0], E.PERKS[n][1]
-    nt = note(n)
+    nt = note(n) or E.STACKING.get(n)
     extra = f'<div style="color:var(--ink-faint);font-size:13px;margin-top:5px">{e(nt)}</div>' if nt else ''
     return (f'<tr data-cat="{R.CATEGORY[n]}" '
             f'data-text="{e((n + " " + d).lower())}">'
@@ -296,6 +296,7 @@ figure, which is how the arrest gets the police it needs.</p>
 <p>Five tiers: {' &middot; '.join(R.RARITY)}.</p>
 <p>{e(E.LADDER_NOTE)}</p>
 <p>{e(E.SPREAD_NOTE)}</p>
+<p>{e(E.STACKING_NOTE)}</p>
 <p>{e(E.SHAPE_NOTE)}</p>
 <p>{e(E.LADDER_RULE)}</p>
 <p class="count">Every figure below was read off a card in game. Nothing is projected.</p>
