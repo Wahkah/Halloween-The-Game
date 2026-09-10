@@ -199,11 +199,14 @@ def rate_row(n):
     idx = lambda t: R.RARITY.index(t)
     lo = min(v, key=idx); hi = max(v, key=idx)
     r = (v[hi] - v[lo]) / (idx(hi) - idx(lo))
-    verdict = ("A large jump. The best upgrade target found so far." if r >= 10 else
-               "A moderate jump, worth it on a card you always run." if r >= 5 else
-               "Almost nothing. Spend the points on rolls instead.")
+    span = r * (len(R.RARITY) - 1)
+    verdict = ("The best use of a 4,000 point upgrade found so far." if r >= 10 else
+               "A real gain, worth the top price on a card you always run." if r >= 5 else
+               "Not worth 4,000 points. Roll instead.")
+    conf = 'measured at three tiers' if len(E.VALUES[n]) > 2 else 'rate from two points'
     return (f'<tr><td class="perk">{e(n)}</td><td class="num">+{r:.1f}</td>'
-            f'<td>{e(verdict)}</td></tr>')
+            f'<td class="num">+{span:.0f} pts</td>'
+            f'<td>{e(verdict)} <span style="color:var(--ink-faint)">({conf})</span></td></tr>')
 
 rate_rows = ''.join(rate_row(n) for n in sorted(
     E.VALUES, key=lambda x: -((max(E.VALUES[x].values()) - min(E.VALUES[x].values()))
@@ -280,10 +283,11 @@ figure, which is how the arrest gets the police it needs.</p>
   <tbody>{ladder_rows}</tbody>
 </table></div>
 <p>{e(E.UPGRADE_NOTE)}</p>
+<p>{e(E.UPGRADE_STRATEGY)}</p>
 <p>{e(E.UPGRADE_PRICE_TIP)}</p>
 <p>{e(E.UPGRADE_RATE_NOTE)}</p>
 <div class="tablewrap"><table>
-  <thead><tr><th>Card</th><th>Points per tier</th><th>What one upgrade buys</th></tr></thead>
+  <thead><tr><th>Card</th><th>Per tier</th><th>I to V</th><th>Verdict on the one upgrade</th></tr></thead>
   <tbody>{rate_rows}</tbody>
 </table></div>
 <p>{e(E.WHY_CURVES)}</p>

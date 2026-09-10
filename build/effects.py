@@ -163,15 +163,19 @@ LADDER_RULE = (
  "all about a different card. Only measured figures appear below. A blank is a blank and "
  "never an estimate.")
 UPGRADE_NOTE = (
- "The upgrade itself is narrow. It runs out after a few matches, and a card can only be "
- "upgraded once, so it is a short term buff rather than a way to climb the tiers. Rolling is "
- "the only route to a genuinely high tier copy, and paying extra on a roll improves the "
- "rarity odds.")
+ "The upgrade expires after a few matches and a card can only be upgraded once, so it is a "
+ "one shot buff rather than a way to climb the tiers. Rolling stays the only route to a "
+ "permanently high tier copy, and paying extra on a roll improves the rarity odds.")
+UPGRADE_STRATEGY = (
+ "The price you pay sets the tier you land on, and 4,000 points reaches V. Since the upgrade "
+ "is one shot, buying a cheaper option spends your only upgrade on a worse destination, which "
+ "makes every price below the top one a trap. Either go to V or do not upgrade that card at "
+ "all. It follows that the upgrade should go on whichever card you run covers the most ground "
+ "between I and V, and that is decided entirely by the steepness of its curve. Reported from "
+ "play rather than measured here.")
 UPGRADE_PRICE_TIP = (
- "The price quoted for an upgrade tracks how much it gives, so a card offering a cheap "
- "upgrade is telling you it has a shallow curve before you spend anything. That is a free "
- "readout of the thing this whole table is trying to measure: expensive means steep. Reported "
- "from play rather than measured here.")
+ "Because price and destination move together, a cheap top end price is a card telling you it "
+ "has a shallow curve before you spend anything.")
 UPGRADE_RATE_NOTE = (
  "Points per tier below is how much ground a card covers between tiers, which is how much "
  "your single upgrade is worth on it. It is not a laddering plan, because there is no "
