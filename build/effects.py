@@ -145,7 +145,7 @@ BLURBS = {
 VALUES = {
  "Slippery":         {"Common": 15, "Uncommon": 20, "Epic": 30},
  "Reveler":          {"Common": 15, "Rare": 50, "Legendary": 100},
- "Aura of Awareness": {"Common": 15, "Rare": 20},
+ "Aura of Awareness": {"Common": 15, "Uncommon": 20, "Rare": 25},
  "Unwinded":         {"Common": 10, "Uncommon": 15, "Legendary": 35},
  "Knockout":         {"Common": 10},
  "Contender":        {"Common": 5},
@@ -155,17 +155,18 @@ NUMERALS = {"Common": "I", "Uncommon": "II", "Rare": "III", "Epic": "IV", "Legen
 LADDER_NOTE = (
  "Cards carry a numeral for their tier, I through V, matching Common through Legendary. Every "
  "card scales on its own curve, and the tier I figure predicts nothing about it. Three cards "
- "all read 15% at tier I. By III, Aura of Awareness has reached 20 and Reveler is at 50, and "
- "by V Reveler is at 100.")
+ "all read 15% at tier I. Two of them, Slippery and Aura of Awareness, then climb five points "
+ "a tier in step with each other. The third is Reveler, which reaches 50 by III and 100 by V.")
 SHAPE_NOTE = (
- "The curves are not straight either. Reveler climbs 17.5 points a tier from I to III and then "
- "25 a tier from III to V, finishing at 100 where a straight line off its lower half would have "
- "put it at 85. Unwinded does the same thing more gently, 5 a tier then 6.7, ending at 35 where "
- "a line predicted 30. Slippery is the exception so far and runs straight at 5 a tier from I to "
- "IV, though its V has never been seen and may jump like the others. So the shape varies per "
- "card as well as the steepness, and the practical read is that tier V is worth "
- "disproportionately more than the tiers under it. The step from IV to V is the biggest step "
- "on every card measured.")
+ "Three of the four cards measured at more than two tiers climb five points a tier through "
+ "their lower half: Slippery from I to IV, Aura of Awareness from I to III, and Unwinded from "
+ "I to II. Reveler is the outlier and climbs 17.5 across the same stretch. What happens higher "
+ "up is the part worth knowing, because both cards seen at V come in above where five a tier "
+ "would put them. Unwinded reads 35 where five a tier gives 30, and Reveler reads 100 where "
+ "its own lower rate gives 85. So the working picture is a gentle climb through the middle and "
+ "a jump at the top, which would make IV to V the biggest single step on a card. That is a "
+ "hypothesis drawn from two cards, and Slippery at V is the number that would test it: five a "
+ "tier gives 35, and anything above that confirms the jump.")
 LADDER_RULE = (
  "So a figure at one tier says nothing about the same card at another tier, and nothing at "
  "all about a different card. Only measured figures appear below. A blank is a blank and "
