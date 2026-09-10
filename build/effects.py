@@ -143,16 +143,32 @@ BLURBS = {
 # its wording, so unlike the descriptions above they are reported as observed.
 #   perk -> {rarity: percentage}
 VALUES = {
- "Slippery":         {"Common": 15, "Uncommon": 20},
+ "Slippery":         {"Common": 15, "Uncommon": 20, "Epic": 30},
+ "Reveler":          {"Common": 15, "Rare": 50},
  "Unwinded":         {"Common": 10},
  "Knockout":         {"Common": 10},
  "Contender":        {"Common": 5},
  "Solid Foundation": {"Common": 5},
 }
-RARITY_STEP = 5   # percentage points added per rarity tier, from Slippery 15 -> 20
+NUMERALS = {"Common": "I", "Uncommon": "II", "Rare": "III", "Epic": "IV", "Legendary": "V"}
 LADDER_NOTE = (
- "Slippery is the only card measured at two rarities so far: 15% Common, 20% Uncommon. "
- "That is a step of 5 points, and every Common value seen is a multiple of 5, so the ladder "
- "looks like a per card base of 5, 10 or 15 with 5 points added per tier. Two points cannot "
- "rule out a multiplying ladder instead, which would reach 47% rather than 35% at Legendary. "
- "A Rare Slippery settles it: 25 means adding, 27 means multiplying.")
+ "Cards carry a numeral for their tier, I through V, matching Common through Legendary. "
+ "Every card scales on its own curve, and one card's row tells you nothing about another's. "
+ "Slippery climbs five points a tier: 15 at I, 20 at II, 30 at IV. Reveler starts at the same "
+ "15 at I and is already at 50 by III, where five a tier would have put it at 25. Same "
+ "starting value, completely different ladder.")
+LADDER_RULE = (
+ "So a figure at one tier says nothing about the same card at another tier, and nothing at "
+ "all about a different card. Only measured figures appear below. A blank is a blank and "
+ "never an estimate.")
+UPGRADE_NOTE = (
+ "It also means an upgrade is worth wildly different amounts depending on what you spend it "
+ "on. One tier of Slippery is five points. Reveler picks up thirty five points across two. "
+ "Until more cards are measured at more than one tier, there is no way to know in advance "
+ "which upgrades are worth Perk Points.")
+WHY_CURVES = (
+ "The game's own data layout points the same way. Perk scaling lives in an asset named for a "
+ "curve table, meaning a table of curves rather than one shared formula. The calibration "
+ "follows the effect: a duration extension can afford to read 50% where a difficulty modifier "
+ "cannot. Which also means percentages are not comparable between cards. Reveler at 50% and "
+ "Slippery at 30% are measuring different things on different scales.")

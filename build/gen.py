@@ -188,13 +188,11 @@ def ladder_cell(n, t):
     v = E.VALUES[n]
     if t in v:
         return f'<td class="num" style="color:var(--pumpkin);font-weight:700">{v[t]}%</td>'
-    lo_tier = min(v, key=lambda x: R.RARITY.index(x))
-    p = v[lo_tier] + E.RARITY_STEP * (R.RARITY.index(t) - R.RARITY.index(lo_tier))
-    return f'<td class="num" style="color:var(--ink-faint)">{p}%</td>'
+    return '<td class="num" style="color:var(--ink-faint)">&mdash;</td>'
 
 ladder_rows = ''.join(
     '<tr><td class="perk">%s</td>%s</tr>' % (e(n), ''.join(ladder_cell(n, t) for t in R.RARITY))
-    for n in sorted(E.VALUES, key=lambda x: -min(E.VALUES[x].values())))
+    for n in sorted(E.VALUES, key=lambda x: (-len(E.VALUES[x]), x)))
 
 deck_rows = ''.join(perk_row(n) for n in sorted(E.PERKS))
 trait_rows = ''.join(
@@ -255,18 +253,17 @@ figure, which is how the arrest gets the police it needs.</p>
 <h2>The rarity ladder</h2>
 <p>Five tiers: {' &middot; '.join(R.RARITY)}.</p>
 <p>{e(E.LADDER_NOTE)}</p>
-<p class="count"><span style="color:var(--pumpkin);font-weight:700">Orange</span> is measured
-in game. <span style="color:var(--ink-faint)">Grey</span> is the pattern extended and has not
-been seen.</p>
+<p>{e(E.LADDER_RULE)}</p>
+<p class="count">Every figure below was read off a card in game. Nothing is projected.</p>
 <div class="tablewrap"><table>
-  <thead><tr><th>Card</th>{''.join(f'<th>{t}</th>' for t in R.RARITY)}</tr></thead>
+  <thead><tr><th>Card</th>{''.join(f'<th>{E.NUMERALS[t]} &middot; {t}</th>' for t in R.RARITY)}</tr></thead>
   <tbody>{ladder_rows}</tbody>
 </table></div>
-<p>Read across a row and the size of the swing is the point. A card at the bottom of the
-scale is worth a fifth of the same card at the top, which makes rarity the largest single
-multiplier available to you. That does not change the deck size argument: a card you never
-want is still a bad draw at Legendary. It does mean that once a card has earned its slot,
-chasing a better copy of it is worth real Perk Points.</p>
+<p>{e(E.UPGRADE_NOTE)}</p>
+<p>{e(E.WHY_CURVES)}</p>
+<p>None of this touches the deck size argument, which is arithmetic about draw pools and does
+not care how large any individual effect turns out to be. A card you never want is a bad draw
+at every tier.</p>
 
 <h2>The perk economy</h2>
 <p>There are two separate rollers and they are easy to confuse. Between matches you spend

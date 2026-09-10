@@ -10,12 +10,12 @@ BUILDS = [
   "It is a flat mechanic rather than a percentage, so card rarity cannot dilute it and an upgrade cannot improve it.",
  ],
  "deck": [
-  ("Slippery", "Grabs are how you die, and this is the only card that makes the struggle minigame itself easier. Measured at 15% Common and 20% Uncommon, the largest base value found so far."),
-  ("Unwinded", "Cheaper sprinting beats faster recovery, because you cannot recover while you are still running. Measured at 10% Common."),
-  ("Solid Foundation", "His shove doubles as a way to interrupt your attacks, so poise is what lets you finish a swing. Measured at 5% for a Common copy though, which is unlikely to survive a shove. Worth the slot only at high rarity."),
+  ("Slippery", "Grabs are how you die, and this is the only card that makes the struggle minigame itself easier. Measured at 15% at tier I, 20% at II and 30% at IV, so it climbs steadily and is worth upgrading."),
+  ("Unwinded", "Cheaper sprinting beats faster recovery, because you cannot recover while you are still running. Measured at 10% at tier I; how it scales above that is unknown."),
+  ("Solid Foundation", "His shove doubles as a way to interrupt your attacks, so poise is what lets you finish a swing. Measured at 5% at tier I, which will not survive a shove. Whether a higher tier fixes that depends on a curve nobody has measured, so treat this slot as unproven."),
   ("Aura of Awareness", "Crowding him is one of the three things that locks him out of Shape Jump. This widens how far crowding reaches, so staying glued to him takes away his escape."),
-  ("Knockout", "The arrest is a long hold on a downed Michael, and this extends the window. Measured at 10% for a Common copy, so it is a help rather than the thing that makes the arrest work."),
-  ("Contender", "Melee damage with no trigger and no positioning requirement. Measured at 5% for a Common copy, which is the floor of the scale, so this slot is carrying less than it looks and is the first one to reconsider."),
+  ("Knockout", "The arrest is a long hold on a downed Michael, and this extends the window. Measured at 10% at tier I, which is a help rather than the thing that makes the arrest work. Its curve is unmeasured, and a steep one would change that."),
+  ("Contender", "Melee damage with no trigger and no positioning requirement. Measured at 5% at tier I, which is the smallest figure seen on any card, so at low rarity this slot carries less than it looks. Its curve is unmeasured."),
  ],
  "swaps": [
   ("Brutal Cleave", "if you run a two hander, since it only touches heavy attacks"),
@@ -49,7 +49,7 @@ BUILDS = [
   ("Solid Foundation", "Poise, so his shove does not interrupt you."),
  ],
  "swaps": [
-  ("Reveler", "extends intoxication, which is the only thing gating Liquid Courage"),
+  ("Reveler", "extends intoxication, which is the only thing gating Liquid Courage. Measured at 15% at tier I and 50% at III, the steepest curve found so far"),
   ("Ghost", "if you would rather shed Stalk faster than have it applied slower"),
   ("Shield of Law", "if you are the one making calls and staying near police"),
  ],
@@ -99,7 +99,7 @@ BUILDS = [
   "Her challenge tree is fear immunity all the way down, with three Stalk marker tiers and two grab escapes on top.",
  ],
  "deck": [
-  ("Knockout", "Extends the knockdown window on any down she contributed to, and Rachel should be the one landing it. Measured at 10% Common, so treat it as a margin rather than the plan."),
+  ("Knockout", "Extends the knockdown window on any down she contributed to, and Rachel should be the one landing it. Measured at 10% at tier I, so at low rarity treat it as a margin rather than the plan."),
   ("Blinding Light", "Blind lasts longer, light drains Bloodthirst, and flashlights speed the detainment meter."),
   ("Contender", "Flat melee, feeding Full Moon."),
   ("Unphased", "Her tree says fearless, and fear stops you calling police."),
@@ -332,7 +332,7 @@ BUILDS = [
   "Witness State pays out on the same condition from the other side: while high, other characters within range have faint outlines. Being high is both his damage buff and his information layer.",
  ],
  "deck": [
-  ("Reveler", "Longer intoxication and high, which is the only thing gating the whole build."),
+  ("Reveler", "Longer intoxication and high, which is the only thing gating the whole build. Measured at 15% at tier I and 50% at III, which makes it the one card on this page where chasing a higher tier is clearly worth it."),
   ("Liquid Courage", "Melee damage while drunk, stacking with the trait."),
   ("Witness State", "Outlines on other characters while high, which turns the drug state into vision."),
   ("Contender", "Flat melee for the stretches where you have sobered up."),
