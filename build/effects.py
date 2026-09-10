@@ -180,6 +180,12 @@ VALUES = {
 # Figures reported by outside guides rather than read off a card here. Kept separate from
 # VALUES because the sites carrying them have a track record of errors on this game, and one
 # of them lists a perk ("Dollar Doll") that does not exist in the game at all.
+PROVENANCE = (
+ "Every figure in the table below was read off a card in game and written down here. That "
+ "appears to be the only way anyone has them: the developer has published none of the balance "
+ "values, the wikis say plainly that exact rarities have not been released, and a search of the "
+ "guide sites turns up two scattered numbers between them. So this is a hand built dataset "
+ "rather than a copy of one, it is incomplete, and where a card is blank nobody has looked yet.")
 REPORTED_ELSEWHERE = {
  "Deaden":   "One guide gives 30% at Uncommon. It also describes the effect as cutting the "
              "visibility of your noise pings, which would settle the direction question on this "

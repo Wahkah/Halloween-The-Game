@@ -256,9 +256,9 @@ page('perks.html', 'Every perk card | Haddonfield Builds',
 <p>A card marked <span class="flat">FLAT</span> does a fixed thing rather than a
 percentage, so a Common copy does the same as a Legendary one and spending Perk Points
 upgrading it is wasted.</p>
-<p>Percentages shown in the <b>Measured</b> column were read off the cards in game. Most
-cards have no figure yet, and nothing here is estimated: a blank means we have not seen
-it. See the ladder below.</p>
+<p>Percentages in the <b>Measured</b> column were read off the cards in game. Nothing is
+estimated: a blank means nobody has looked at that one yet.</p>
+<p>{e(E.PROVENANCE)}</p>
 </div>
 
 <h2>Deck perks</h2>
