@@ -148,6 +148,7 @@ VALUES = {
  "Aura of Awareness": {"Common": 15, "Uncommon": 20, "Rare": 25},
  "Unwinded":         {"Common": 10, "Uncommon": 15, "Legendary": 35},
  "Knockout":         {"Common": 10},
+ "Shared Desperation": {"Rare": 30, "Epic": 40},
  "Contender":        {"Common": 5},
  "Solid Foundation": {"Common": 5},
 }
@@ -181,9 +182,17 @@ UPGRADE_STRATEGY = (
  "makes every price below the top one a trap. Either go to V or leave the card alone. "
  "Reported from play rather than measured here.")
 UPGRADE_MEASURED_PRICE = (
- "One price has been seen: 3,818 points took a Reveler from III to V. So the cost depends on "
- "how far you are jumping and not only on the destination, and an upgrade from I would cost "
- "more than that.")
+ "Two prices have been seen. A Reveler went from III to V, two tiers, for 3,818. A Shared "
+ "Desperation went from III to IV, one tier, for 3,148. Two tiers cost barely more than one, "
+ "so the price is not paying for distance. It tracks the destination: reaching IV costs "
+ "roughly 3,150 and reaching V roughly 3,820, whatever card you point it at and wherever it "
+ "starts.")
+UPGRADE_DESTINATION = (
+ "Which makes the decision simple. The bill is the same for every card, so the only question "
+ "is which of the cards you actually run gains the most on the way to V. Those two purchases "
+ "make the point: the Reveler bought 50 points for 3,818 and the Shared Desperation bought 10 "
+ "for 3,148, four times the value for a fifth more money. Going to V rather than IV costs "
+ "about 20% more and is worth far more than that on any card whose curve steepens at the top.")
 UPGRADE_VS_ROLL = (
  "There is a larger question underneath that one. An upgrade expires after a few matches and "
  "a roll is permanent, so 4,000 points spent upgrading is 4,000 points not spent on rolls that "
@@ -193,8 +202,9 @@ UPGRADE_VS_ROLL = (
  "Rolling wins over any horizon longer than the handful of matches an upgrade survives, which "
  "leaves the upgrade as something to spend a surplus on rather than a plan.")
 UPGRADE_PRICE_TIP = (
- "Because price and destination move together, a cheap top end price is a card telling you it "
- "has a shallow curve before you spend anything.")
+ "An earlier version of this page suggested the quoted price told you something about the "
+ "card's own curve. It does not. The price is set by the tier you are buying, so it is the "
+ "same on a card that gains 50 points and one that gains 10.")
 UPGRADE_RATE_NOTE = (
  "Points per tier below is how much ground a card covers between tiers, which is how much "
  "your single upgrade is worth on it. It is not a laddering plan, because there is no "

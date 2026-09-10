@@ -210,8 +210,13 @@ def rate_row(n):
     else:
         shape = 'straight so far'
     span = f'{v[lo]}% at {E.NUMERALS[lo]} to {v[hi]}% at {E.NUMERALS[hi]}'
-    verdict = ('The largest climb measured anywhere.' if r >= 10 else
-               'A real gain on a card you always run.' if r >= 5 else
+    best = max((max(vv.values()) - min(vv.values())) /
+               (R.RARITY.index(max(vv, key=lambda t: R.RARITY.index(t)))
+                - R.RARITY.index(min(vv, key=lambda t: R.RARITY.index(t))))
+               for vv in E.VALUES.values() if len(vv) > 1)
+    verdict = ('The steepest card measured. Point your upgrade here.' if r >= best - 0.1 else
+               'Steep. A strong upgrade target.' if r >= 8 else
+               'A real gain on a card you always run.' if r >= 4 else
                'Barely moves. Roll instead of upgrading it.')
     return (f'<tr><td class="perk">{e(n)}</td><td class="num">+{r:.1f}</td>'
             f'<td>{e(span)}</td>'
@@ -295,6 +300,7 @@ figure, which is how the arrest gets the police it needs.</p>
 <p>{e(E.UPGRADE_NOTE)}</p>
 <p>{e(E.UPGRADE_STRATEGY)}</p>
 <p>{e(E.UPGRADE_MEASURED_PRICE)}</p>
+<p>{e(E.UPGRADE_DESTINATION)}</p>
 <p>{e(E.UPGRADE_VS_ROLL)}</p>
 <p>{e(E.UPGRADE_PRICE_TIP)}</p>
 <p>{e(E.UPGRADE_RATE_NOTE)}</p>
