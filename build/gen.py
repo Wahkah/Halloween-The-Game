@@ -169,6 +169,11 @@ cats = sorted({R.CATEGORY[n] for n in E.PERKS}, key=lambda c: list(R.CATEGORY_LA
 btns = ''.join(f'<button data-cat="{c}" aria-pressed="false">{e(R.CATEGORY_LABEL[c])}</button>'
                for c in cats)
 
+def measured(n):
+    v = E.VALUES.get(n)
+    if not v: return '<span style="color:var(--ink-faint)">&mdash;</span>'
+    return ' '.join(f'<span class="mono">{r[:4]} {p}%</span>' for r, p in v.items())
+
 def perk_row(n):
     d, sc = E.PERKS[n][0], E.PERKS[n][1]
     nt = note(n)
@@ -176,7 +181,20 @@ def perk_row(n):
     return (f'<tr data-cat="{R.CATEGORY[n]}" '
             f'data-text="{e((n + " " + d).lower())}">'
             f'<td class="perk">{e(n)}{flat_badge(sc)}</td>'
-            f'<td>{e(d)}{extra}</td></tr>')
+            f'<td>{e(d)}{extra}</td>'
+            f'<td style="white-space:nowrap">{"" if not sc else measured(n)}</td></tr>')
+
+def ladder_cell(n, t):
+    v = E.VALUES[n]
+    if t in v:
+        return f'<td class="num" style="color:var(--pumpkin);font-weight:700">{v[t]}%</td>'
+    lo_tier = min(v, key=lambda x: R.RARITY.index(x))
+    p = v[lo_tier] + E.RARITY_STEP * (R.RARITY.index(t) - R.RARITY.index(lo_tier))
+    return f'<td class="num" style="color:var(--ink-faint)">{p}%</td>'
+
+ladder_rows = ''.join(
+    '<tr><td class="perk">%s</td>%s</tr>' % (e(n), ''.join(ladder_cell(n, t) for t in R.RARITY))
+    for n in sorted(E.VALUES, key=lambda x: -min(E.VALUES[x].values())))
 
 deck_rows = ''.join(perk_row(n) for n in sorted(E.PERKS))
 trait_rows = ''.join(
@@ -198,8 +216,9 @@ page('perks.html', 'Every perk card | Haddonfield Builds',
 <p>A card marked <span class="flat">FLAT</span> does a fixed thing rather than a
 percentage, so a Common copy does the same as a Legendary one and spending Perk Points
 upgrading it is wasted.</p>
-<p>No percentages appear anywhere on this site. The effects are known and the magnitudes
-are not, so rather than repeat numbers with no source behind them, we left them out.</p>
+<p>Percentages shown in the <b>Measured</b> column were read off the cards in game. Most
+cards have no figure yet, and nothing here is estimated: a blank means we have not seen
+it. See the ladder below.</p>
 </div>
 
 <h2>Deck perks</h2>
@@ -210,7 +229,7 @@ are not, so rather than repeat numbers with no source behind them, we left them 
   <span class="count" id="cnt"></span>
 </div>
 <div class="tablewrap"><table id="perktable">
-  <thead><tr><th>Card</th><th>What it does</th></tr></thead>
+  <thead><tr><th>Card</th><th>What it does</th><th>Measured</th></tr></thead>
   <tbody>{deck_rows}</tbody>
 </table></div>
 
@@ -233,8 +252,23 @@ figure, which is how the arrest gets the police it needs.</p>
   <tbody>{spec_rows}</tbody>
 </table></div>
 
-<h2>Rarity and the perk economy</h2>
-<p>Five rarity tiers: {' &middot; '.join(R.RARITY)}.</p>
+<h2>The rarity ladder</h2>
+<p>Five tiers: {' &middot; '.join(R.RARITY)}.</p>
+<p>{e(E.LADDER_NOTE)}</p>
+<p class="count"><span style="color:var(--pumpkin);font-weight:700">Orange</span> is measured
+in game. <span style="color:var(--ink-faint)">Grey</span> is the pattern extended and has not
+been seen.</p>
+<div class="tablewrap"><table>
+  <thead><tr><th>Card</th>{''.join(f'<th>{t}</th>' for t in R.RARITY)}</tr></thead>
+  <tbody>{ladder_rows}</tbody>
+</table></div>
+<p>Read across a row and the size of the swing is the point. A card at the bottom of the
+scale is worth a fifth of the same card at the top, which makes rarity the largest single
+multiplier available to you. That does not change the deck size argument: a card you never
+want is still a bad draw at Legendary. It does mean that once a card has earned its slot,
+chasing a better copy of it is worth real Perk Points.</p>
+
+<h2>The perk economy</h2>
 <p>There are two separate rollers and they are easy to confuse. Between matches you spend
 Perk Points to add a random card to your collection, and paying more improves the rarity
 odds. During a match you earn perk rolls that draw from the deck you brought and apply

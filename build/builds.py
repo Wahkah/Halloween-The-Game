@@ -10,12 +10,12 @@ BUILDS = [
   "It is a flat mechanic rather than a percentage, so card rarity cannot dilute it and an upgrade cannot improve it.",
  ],
  "deck": [
-  ("Slippery", "Grabs are how you die, and this is the only card that makes the struggle minigame itself easier."),
-  ("Unwinded", "Cheaper sprinting beats faster recovery, because you cannot recover while you are still running."),
-  ("Solid Foundation", "His shove is described as a way to block incoming attacks, so poise is what lets you finish a swing."),
+  ("Slippery", "Grabs are how you die, and this is the only card that makes the struggle minigame itself easier. Measured at 15% Common and 20% Uncommon, the largest base value found so far."),
+  ("Unwinded", "Cheaper sprinting beats faster recovery, because you cannot recover while you are still running. Measured at 10% Common."),
+  ("Solid Foundation", "His shove doubles as a way to interrupt your attacks, so poise is what lets you finish a swing. Measured at 5% for a Common copy though, which is unlikely to survive a shove. Worth the slot only at high rarity."),
   ("Aura of Awareness", "Crowding him is one of the three things that locks him out of Shape Jump. This widens how far crowding reaches, so staying glued to him takes away his escape."),
-  ("Knockout", "The arrest is a long hold on a downed Michael. This is the card that buys the time to finish it."),
-  ("Contender", "Flat melee damage with no trigger and no positioning requirement."),
+  ("Knockout", "The arrest is a long hold on a downed Michael, and this extends the window. Measured at 10% for a Common copy, so it is a help rather than the thing that makes the arrest work."),
+  ("Contender", "Melee damage with no trigger and no positioning requirement. Measured at 5% for a Common copy, which is the floor of the scale, so this slot is carrying less than it looks and is the first one to reconsider."),
  ],
  "swaps": [
   ("Brutal Cleave", "if you run a two hander, since it only touches heavy attacks"),
@@ -99,7 +99,7 @@ BUILDS = [
   "Her challenge tree is fear immunity all the way down, with three Stalk marker tiers and two grab escapes on top.",
  ],
  "deck": [
-  ("Knockout", "Extends the knockdown window on any down she contributed to, and Rachel should be the one landing it."),
+  ("Knockout", "Extends the knockdown window on any down she contributed to, and Rachel should be the one landing it. Measured at 10% Common, so treat it as a margin rather than the plan."),
   ("Blinding Light", "Blind lasts longer, light drains Bloodthirst, and flashlights speed the detainment meter."),
   ("Contender", "Flat melee, feeding Full Moon."),
   ("Unphased", "Her tree says fearless, and fear stops you calling police."),

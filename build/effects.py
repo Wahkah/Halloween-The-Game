@@ -138,3 +138,21 @@ BLURBS = {
  "Jennifer Aarons":    "Prom queen and valedictorian, happier at home with a book than out on a date.",
  "Richard Hawthorne":  "New money from California, crowned party king within a month of arriving.",
 }
+
+# Measured values, read off the cards in game. These are facts about the game rather than
+# its wording, so unlike the descriptions above they are reported as observed.
+#   perk -> {rarity: percentage}
+VALUES = {
+ "Slippery":         {"Common": 15, "Uncommon": 20},
+ "Unwinded":         {"Common": 10},
+ "Knockout":         {"Common": 10},
+ "Contender":        {"Common": 5},
+ "Solid Foundation": {"Common": 5},
+}
+RARITY_STEP = 5   # percentage points added per rarity tier, from Slippery 15 -> 20
+LADDER_NOTE = (
+ "Slippery is the only card measured at two rarities so far: 15% Common, 20% Uncommon. "
+ "That is a step of 5 points, and every Common value seen is a multiple of 5, so the ladder "
+ "looks like a per card base of 5, 10 or 15 with 5 points added per tier. Two points cannot "
+ "rule out a multiplying ladder instead, which would reach 47% rather than 35% at Legendary. "
+ "A Rare Slippery settles it: 25 means adding, 27 means multiplying.")
