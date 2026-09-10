@@ -177,6 +177,25 @@ VALUES = {
  "Panic Contagion":       {"Common": 2},
  "Elusory":               {"Common": 1},
 }
+# Figures reported by outside guides rather than read off a card here. Kept separate from
+# VALUES because the sites carrying them have a track record of errors on this game, and one
+# of them lists a perk ("Dollar Doll") that does not exist in the game at all.
+REPORTED_ELSEWHERE = {
+ "Deaden":   "One guide gives 30% at Uncommon. It also describes the effect as cutting the "
+             "visibility of your noise pings, which would settle the direction question on this "
+             "card. Unverified.",
+ "Barricade": "One guide gives 35%, with no tier stated. Unverified.",
+}
+ECONOMY_REPORTED = (
+ "Three mechanics are reported consistently by more than one outside guide and match what has "
+ "been seen in play, so they are recorded here with that caveat. A roll starts at 100 Perk "
+ "Points and can be raised to 500 or 1,000 for better rarity odds. A deck holds up to 15 cards. "
+ "During a match the game offers three cards from your deck and you take one.")
+ECONOMY_CONSEQUENCE = (
+ "Those roll costs finally put a scale on the upgrade. Reaching tier V costs about 3,820 "
+ "points, which is 38 basic rolls, or three at the top stake where the rarity odds "
+ "are best. Set against a buff that expires after a few matches on a single card, rolling is "
+ "the better use of the points by a wide margin.")
 STACKING = {"Wired": "Each Pop consumed adds another instance, and it lasts the rest of the match. "
                      "No cap is stated, so the figure below is per Pop rather than a total.",
             "Revenge": "Each nearby death adds an instance, capped at five, so the figure below is "

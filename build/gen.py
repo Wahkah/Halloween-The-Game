@@ -183,7 +183,7 @@ def measured(n):
 
 def perk_row(n):
     d, sc = E.PERKS[n][0], E.PERKS[n][1]
-    nt = note(n) or E.STACKING.get(n)
+    nt = note(n) or E.STACKING.get(n) or E.REPORTED_ELSEWHERE.get(n)
     extra = f'<div style="color:var(--ink-faint);font-size:13px;margin-top:5px">{e(nt)}</div>' if nt else ''
     return (f'<tr data-cat="{R.CATEGORY[n]}" '
             f'data-text="{e((n + " " + d).lower())}">'
@@ -308,6 +308,8 @@ figure, which is how the arrest gets the police it needs.</p>
 <p>{e(E.UPGRADE_STRATEGY)}</p>
 <p>{e(E.UPGRADE_MEASURED_PRICE)}</p>
 <p>{e(E.UPGRADE_DESTINATION)}</p>
+<p>{e(E.ECONOMY_REPORTED)}</p>
+<p>{e(E.ECONOMY_CONSEQUENCE)}</p>
 <p>{e(E.UPGRADE_VS_ROLL)}</p>
 <p>{e(E.UPGRADE_PRICE_TIP)}</p>
 <p>{e(E.UPGRADE_RATE_NOTE)}</p>
