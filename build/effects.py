@@ -169,10 +169,16 @@ UPGRADE_NOTE = (
 UPGRADE_STRATEGY = (
  "The price you pay sets the tier you land on, and 4,000 points reaches V. Since the upgrade "
  "is one shot, buying a cheaper option spends your only upgrade on a worse destination, which "
- "makes every price below the top one a trap. Either go to V or do not upgrade that card at "
- "all. It follows that the upgrade should go on whichever card you run covers the most ground "
- "between I and V, and that is decided entirely by the steepness of its curve. Reported from "
- "play rather than measured here.")
+ "makes every price below the top one a trap. Either go to V or leave the card alone. "
+ "Reported from play rather than measured here.")
+UPGRADE_VS_ROLL = (
+ "There is a larger question underneath that one. An upgrade expires after a few matches and "
+ "a roll is permanent, so 4,000 points spent upgrading is 4,000 points not spent on rolls that "
+ "keep whatever they land. Nobody has published what a match pays or what a roll costs, and "
+ "the official progression page gives no figures, but the comparison barely depends on them. "
+ "At a hundred points a roll the upgrade costs forty rolls. Even at a thousand it costs four. "
+ "Rolling wins over any horizon longer than the handful of matches an upgrade survives, which "
+ "leaves the upgrade as something to spend a surplus on rather than a plan.")
 UPGRADE_PRICE_TIP = (
  "Because price and destination move together, a cheap top end price is a card telling you it "
  "has a shallow curve before you spend anything.")

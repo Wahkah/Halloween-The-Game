@@ -284,6 +284,7 @@ figure, which is how the arrest gets the police it needs.</p>
 </table></div>
 <p>{e(E.UPGRADE_NOTE)}</p>
 <p>{e(E.UPGRADE_STRATEGY)}</p>
+<p>{e(E.UPGRADE_VS_ROLL)}</p>
 <p>{e(E.UPGRADE_PRICE_TIP)}</p>
 <p>{e(E.UPGRADE_RATE_NOTE)}</p>
 <div class="tablewrap"><table>
