@@ -145,6 +145,7 @@ BLURBS = {
 VALUES = {
  "Slippery":         {"Common": 15, "Uncommon": 20, "Epic": 30},
  "Reveler":          {"Common": 15, "Rare": 50},
+ "Aura of Awareness": {"Common": 15, "Rare": 20},
  "Unwinded":         {"Common": 10},
  "Knockout":         {"Common": 10},
  "Contender":        {"Common": 5},
@@ -153,19 +154,28 @@ VALUES = {
 NUMERALS = {"Common": "I", "Uncommon": "II", "Rare": "III", "Epic": "IV", "Legendary": "V"}
 LADDER_NOTE = (
  "Cards carry a numeral for their tier, I through V, matching Common through Legendary. "
- "Every card scales on its own curve, and one card's row tells you nothing about another's. "
- "Slippery climbs five points a tier: 15 at I, 20 at II, 30 at IV. Reveler starts at the same "
- "15 at I and is already at 50 by III, where five a tier would have put it at 25. Same "
- "starting value, completely different ladder.")
+ "Every card scales on its own curve, and the tier I figure predicts nothing about it. Three "
+ "cards all read 15% at tier I. By tier III, Aura of Awareness has reached 20, Slippery is on "
+ "track for 25, and Reveler is at 50. Same starting point, a two and a half times spread two "
+ "tiers later.")
 LADDER_RULE = (
  "So a figure at one tier says nothing about the same card at another tier, and nothing at "
  "all about a different card. Only measured figures appear below. A blank is a blank and "
  "never an estimate.")
 UPGRADE_NOTE = (
- "It also means an upgrade is worth wildly different amounts depending on what you spend it "
- "on. One tier of Slippery is five points. Reveler picks up thirty five points across two. "
- "Until more cards are measured at more than one tier, there is no way to know in advance "
- "which upgrades are worth Perk Points.")
+ "The upgrade itself is narrow. It runs out after a few matches, and a card can only be "
+ "upgraded once, so it is a short term buff rather than a way to climb the tiers. Rolling is "
+ "the only route to a genuinely high tier copy, and paying extra on a roll improves the "
+ "rarity odds.")
+UPGRADE_PRICE_TIP = (
+ "The price quoted for an upgrade tracks how much it gives, so a card offering a cheap "
+ "upgrade is telling you it has a shallow curve before you spend anything. That is a free "
+ "readout of the thing this whole table is trying to measure: expensive means steep. Reported "
+ "from play rather than measured here.")
+UPGRADE_RATE_NOTE = (
+ "Points per tier below is how much ground a card covers between tiers, which is how much "
+ "your single upgrade is worth on it. It is not a laddering plan, because there is no "
+ "laddering.")
 WHY_CURVES = (
  "The game's own data layout points the same way. Perk scaling lives in an asset named for a "
  "curve table, meaning a table of curves rather than one shared formula. The calibration "

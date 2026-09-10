@@ -193,6 +193,23 @@ def ladder_cell(n, t):
         return f'<td class="num" style="color:var(--pumpkin);font-weight:700">{v[t]}%</td>'
     return '<td class="num" style="color:var(--ink-faint)">&mdash;</td>'
 
+def rate_row(n):
+    v = E.VALUES[n]
+    if len(v) < 2: return ''
+    idx = lambda t: R.RARITY.index(t)
+    lo = min(v, key=idx); hi = max(v, key=idx)
+    r = (v[hi] - v[lo]) / (idx(hi) - idx(lo))
+    verdict = ("A large jump. The best upgrade target found so far." if r >= 10 else
+               "A moderate jump, worth it on a card you always run." if r >= 5 else
+               "Almost nothing. Spend the points on rolls instead.")
+    return (f'<tr><td class="perk">{e(n)}</td><td class="num">+{r:.1f}</td>'
+            f'<td>{e(verdict)}</td></tr>')
+
+rate_rows = ''.join(rate_row(n) for n in sorted(
+    E.VALUES, key=lambda x: -((max(E.VALUES[x].values()) - min(E.VALUES[x].values()))
+                              / max(1, R.RARITY.index(max(E.VALUES[x], key=lambda t: R.RARITY.index(t)))
+                                       - R.RARITY.index(min(E.VALUES[x], key=lambda t: R.RARITY.index(t)))))))
+
 ladder_rows = ''.join(
     '<tr><td class="perk">%s</td>%s</tr>' % (e(n), ''.join(ladder_cell(n, t) for t in R.RARITY))
     for n in sorted(E.VALUES, key=lambda x: (-len(E.VALUES[x]), x)))
@@ -263,6 +280,12 @@ figure, which is how the arrest gets the police it needs.</p>
   <tbody>{ladder_rows}</tbody>
 </table></div>
 <p>{e(E.UPGRADE_NOTE)}</p>
+<p>{e(E.UPGRADE_PRICE_TIP)}</p>
+<p>{e(E.UPGRADE_RATE_NOTE)}</p>
+<div class="tablewrap"><table>
+  <thead><tr><th>Card</th><th>Points per tier</th><th>What one upgrade buys</th></tr></thead>
+  <tbody>{rate_rows}</tbody>
+</table></div>
 <p>{e(E.WHY_CURVES)}</p>
 <p>None of this touches the deck size argument, which is arithmetic about draw pools and does
 not care how large any individual effect turns out to be. A card you never want is a bad draw

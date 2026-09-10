@@ -13,7 +13,7 @@ BUILDS = [
   ("Slippery", "Grabs are how you die, and this is the only card that makes the struggle minigame itself easier. Measured at 15% at tier I, 20% at II and 30% at IV, so it climbs steadily and is worth upgrading."),
   ("Unwinded", "Cheaper sprinting beats faster recovery, because you cannot recover while you are still running. Measured at 10% at tier I; how it scales above that is unknown."),
   ("Solid Foundation", "His shove doubles as a way to interrupt your attacks, so poise is what lets you finish a swing. Measured at 5% at tier I, which will not survive a shove. Whether a higher tier fixes that depends on a curve nobody has measured, so treat this slot as unproven."),
-  ("Aura of Awareness", "Crowding him is one of the three things that locks him out of Shape Jump. This widens how far crowding reaches, so staying glued to him takes away his escape."),
+  ("Aura of Awareness", "Crowding him already locks him out of Shape Jump without any perk, and this widens your personal radius for it. Measured at 15% at tier I and only 20% at III, so it is a modest extension of something you get for free rather than a lockdown tool. Keep it for the mechanism, take it at any tier, and never upgrade it."),
   ("Knockout", "The arrest is a long hold on a downed Michael, and this extends the window. Measured at 10% at tier I, which is a help rather than the thing that makes the arrest work. Its curve is unmeasured, and a steep one would change that."),
   ("Contender", "Melee damage with no trigger and no positioning requirement. Measured at 5% at tier I, which is the smallest figure seen on any card, so at low rarity this slot carries less than it looks. Its curve is unmeasured."),
  ],
