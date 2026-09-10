@@ -45,7 +45,7 @@ PERKS = {
  "Inspiring":          ("Residents you tell to hide get more maximum health.", True),
  "Runner's High":      ("Being exhausted slows you down less.", True),
  "Therapeutic":        ("Healing items do more when you use them on somebody else.", True),
- "Unwinded":           ("Everything you do costs less stamina.", True),
+ "Unwinded":           ("Reduces all stamina use, not just sprinting, so it applies to every action that draws on the bar.", True),
  "Wound Mender":       ("Health items restore more health.", True),
  # --- fear and intoxication ---
  "Reveler":            ("Drunk and high both last longer.", True),

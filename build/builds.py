@@ -11,7 +11,7 @@ BUILDS = [
  ],
  "deck": [
   ("Slippery", "Grabs are how you die, and this is the only card that makes the struggle minigame itself easier. Measured at 15% at tier I, 20% at II and 30% at IV, so it climbs steadily and is worth upgrading."),
-  ("Unwinded", "Cheaper sprinting beats faster recovery, because you cannot recover while you are still running. Measured at 10% at tier I; how it scales above that is unknown."),
+  ("Unwinded", "It reduces all stamina use rather than sprinting alone, so it pays out on every action that draws the bar. That matters more here than on any other build, because a bully spends stamina fighting and escaping as well as running. Measured at 10% at I, 15% at II and 35% at V, and it accelerates."),
   ("Solid Foundation", "His shove doubles as a way to interrupt your attacks, so poise is what lets you finish a swing. Measured at 5% at tier I, which will not survive a shove. Whether a higher tier fixes that depends on a curve nobody has measured, so treat this slot as unproven."),
   ("Aura of Awareness", "Crowding him already locks him out of Shape Jump without any perk, and this widens your personal radius for it. Measured at 15% at tier I and only 20% at III, so it is a modest extension of something you get for free rather than a lockdown tool. Keep it for the mechanism, take it at any tier, and never upgrade it."),
   ("Knockout", "The arrest is a long hold on a downed Michael, and this extends the window. Measured at 10% at tier I, which is a help rather than the thing that makes the arrest work. Its curve is unmeasured, and a steep one would change that."),
@@ -42,7 +42,7 @@ BUILDS = [
  ],
  "deck": [
   ("Slippery", "Same reason as every other deck on this page."),
-  ("Unwinded", "Bob's tree is built around shedding Stalk markers, which means running."),
+  ("Unwinded", "Bob sheds Stalk markers by running and gets grabbed by standing in the way, and this covers all stamina use, so it funds both halves."),
   ("Elusory", "Slows the Stalk being applied to you. Bob has no Running Back, so he buys stalk denial with a slot."),
   ("Liquid Courage", "Melee damage while drunk, and Heavyweight means drunk costs him nothing."),
   ("Contender", "Stacks with the above and works when you have not found a beer."),
@@ -75,7 +75,7 @@ BUILDS = [
   ("Deaden", "Quieter noise pings. Michael's whole tracking layer is noise."),
   ("Fade to Black", "Hiding spots degrade Stalk faster, so hiding is progress rather than a pause."),
   ("Slippery", "Insurance for the times the stealth fails."),
-  ("Unwinded", "You will be crossing the map constantly."),
+  ("Unwinded", "You cross the map constantly, and it covers everything else that spends stamina on the way."),
  ],
  "swaps": [
   ("Fleeting Shadow", "faster in and out of hiding spots, if you use them as chase tools"),
@@ -104,7 +104,7 @@ BUILDS = [
   ("Contender", "Flat melee, feeding Full Moon."),
   ("Unphased", "Her tree says fearless, and fear stops you calling police."),
   ("Slippery", "Standard grab insurance."),
-  ("Unwinded", "Standard chase fuel."),
+  ("Unwinded", "All stamina use, not just the chase, which is what makes it a staple rather than a situational card."),
  ],
  "swaps": [
   ("Brimstone Fuse", "firecrackers disorient him for longer, which is a free window"),
@@ -162,7 +162,7 @@ BUILDS = [
   ("Silver Tongue", "Her tree is conversations, and a perfect score converts Residents faster."),
   ("Smooth Talker", "Wider perfect area on the dispatch skill check, for calling police."),
   ("Slippery", "Baiting means being close to the bait."),
-  ("Unwinded", "You will be moving between noise makers all match."),
+  ("Unwinded", "You move between noise makers all match, and it covers every other stamina cost too."),
  ],
  "swaps": [
   ("Pied Piper", "if the team needs a second evacuator"),
@@ -190,7 +190,7 @@ BUILDS = [
   ("Trespasser", "Pick locked doors, which opens routes and shortcuts nobody else has."),
   ("Survival Skills", "Phones within range are outlined with their status, so you never walk to a dead one."),
   ("Deaden", "Objectives are loud and you stand still doing them."),
-  ("Unwinded", "Long routes between broken things."),
+  ("Unwinded", "Long routes between broken things, and it discounts the rest of your stamina spend as well."),
   ("Slippery", "You will be caught mid interaction at some point."),
  ],
  "swaps": [
@@ -279,7 +279,7 @@ BUILDS = [
   ("Field Triage", "Faster spray and med kit use, so you are exposed for less time doing it."),
   ("Fade to Black", "Hiding spots shed Stalk faster, and you will be in hiding spots for the pair buff."),
   ("Slippery", "Healing means standing still next to somebody he is hunting."),
-  ("Unwinded", "Getting to the person who needs healing."),
+  ("Unwinded", "Getting to whoever needs healing, and every other draw on the bar."),
  ],
  "swaps": [
   ("Fleeting Shadow", "faster in and out of hiding spots, which pairs with the trait"),
@@ -306,7 +306,7 @@ BUILDS = [
   ("Exit Strategy", "Larger escape route discovery radius, which is her tree's own theme."),
   ("Survival Intuition", "One escape marked at the start of the match. Flat effect, so rarity does not matter."),
   ("Silver Tongue", "More time for a perfect conversation, and Dreamer keys off successful interactions."),
-  ("Unwinded", "Route knowledge is worthless if you cannot get there."),
+  ("Unwinded", "Route knowledge is worthless if you cannot get there, and it discounts everything else you spend stamina on."),
   ("Adrenaline", "Stamina recharge, for the legs between discovered routes."),
   ("Slippery", "The standard insurance card."),
  ],
