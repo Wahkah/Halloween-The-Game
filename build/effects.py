@@ -145,35 +145,43 @@ BLURBS = {
 VALUES = {
  "Reveler":               {"Common": 15, "Rare": 50, "Legendary": 100},
  "Voice of Reason":       {"Common": 50},
+ "Guardian Shadow":       {"Common": 10, "Epic": 40},
  "Shared Desperation":    {"Common": 15, "Rare": 30, "Epic": 40},
  "Exit Strategy":         {"Common": 25, "Uncommon": 35},
+ "Unphased":              {"Rare": 35},
  "Unwinded":              {"Common": 10, "Uncommon": 15, "Legendary": 35},
- "Silver Tongue":         {"Rare": 30},
+ "Repair Expert":         {"Common": 20, "Uncommon": 25, "Rare": 30},
+ "Silver Tongue":         {"Common": 15, "Rare": 30},
  "Slippery":              {"Common": 15, "Uncommon": 20, "Epic": 30},
  "Aura of Awareness":     {"Common": 15, "Uncommon": 20, "Rare": 25},
+ "Barricade":             {"Common": 25},
  "Frantic":               {"Uncommon": 25},
- "Brutal Cleave":         {"Rare": 20},
+ "Brimstone Fuse":        {"Uncommon": 20},
+ "Brutal Cleave":         {"Uncommon": 15, "Rare": 20},
+ "Ghost":                 {"Rare": 20},
  "Grave Footing":         {"Common": 20},
  "Lethal Pitch":          {"Uncommon": 20},
  "Panic Drive":           {"Common": 20},
- "Repair Expert":         {"Common": 20},
  "Shield of Law":         {"Uncommon": 20},
+ "Survival Rage":         {"Rare": 20},
  "Fade to Black":         {"Common": 15},
+ "Liquid Courage":        {"Common": 5, "Uncommon": 10, "Rare": 15},
+ "Witness State":         {"Common": 10, "Uncommon": 15},
+ "Breakfall":             {"Rare": 10},
+ "Clotting":              {"Uncommon": 10},
  "Field Triage":          {"Common": 10},
  "Glass Walker":          {"Common": 10},
- "Guardian Shadow":       {"Common": 10},
  "Hardened":              {"Common": 10},
  "Iron Ankles":           {"Common": 10},
- "Knockout":              {"Common": 10},
- "Liquid Courage":        {"Common": 5, "Uncommon": 10},
+ "Knockout":              {"Common": 10, "Uncommon": 10},
  "Smooth Talker":         {"Common": 10},
+ "Solid Foundation":      {"Common": 5, "Uncommon": 10},
  "Stubborn":              {"Common": 10},
- "Witness State":         {"Common": 10},
  "Wound Mender":          {"Common": 5, "Uncommon": 10},
  "Adrenaline":            {"Common": 8},
- "Contender":             {"Common": 5},
- "Solid Foundation":      {"Common": 5},
  "Wired":                 {"Common": 3, "Uncommon": 7},
+ "Contender":             {"Common": 5},
+ "Trespasser":            {"Common": 5},
  "Panic Contagion":       {"Common": 2},
  "Elusory":               {"Common": 1},
 }
@@ -212,7 +220,14 @@ STACKING_NOTE = (
  "the rest of the match with no stated cap. Four cans at tier II is 28%. Revenge is capped at "
  "five stacks, so its number is a fifth of its ceiling. Read both as a rate rather than a total, "
  "and do not rank them against the flat cards on the raw figure.")
-METRE_VALUES = {"Witness State"}          # figure is a distance in metres, not a per cent
+METRE_VALUES = {"Witness State"}
+SECOND_VALUES = {"Trespasser"}            # a hold duration, so a lower figure is better
+LOWER_IS_BETTER = {"Trespasser"}
+ANOMALIES = {
+ "Knockout": "Reads 10% at both I and II. It is the only card measured that gains nothing "
+             "across a tier step, so either it stays flat through its lower half and jumps "
+             "later, or the display is rounding a small climb. Worth a look at III before "
+             "spending anything on it."}          # figure is a distance in metres, not a per cent
 FLAT_CONFIRMED = {"Pied Piper": "II and V read the same",
                   "Survival Intuition": "II and III read the same as V"}
 TIER_UNCONFIRMED = {"Hardened": "reported without a tier; recorded here as I"}

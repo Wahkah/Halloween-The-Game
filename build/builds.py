@@ -18,7 +18,7 @@ BUILDS = [
   ("Grave Footing", "Reads 20% at tier I, four times what Contender manages, and tripping while exhausted is a real way to lose a chase you were winning. Promoted out of the swaps once the figures landed."),
  ],
  "swaps": [
-  ("Brutal Cleave", "if you run a two hander, since it only touches heavy attacks"),
+  ("Brutal Cleave", "reads 15% at II against Contender's 5% at I, so at matched tiers it is the larger number. It only touches heavy attacks, which makes it the better card specifically if you are swinging a sledgehammer or a two handed axe"),
   ("Solid Foundation", "5% at tier I and unmeasured above that. It was in this deck until the figures landed"),
   ("Relentless Steel", "unmeasured, worth trying if your bat keeps breaking halfway through a fight"),
  ],

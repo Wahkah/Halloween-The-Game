@@ -173,7 +173,9 @@ btns = ''.join(f'<button data-cat="{c}" aria-pressed="false">{e(R.CATEGORY_LABEL
                for c in cats)
 
 def unit(n):
-    return 'm' if n in E.METRE_VALUES else '%'
+    if n in E.METRE_VALUES: return 'm'
+    if n in E.SECOND_VALUES: return 's'
+    return '%'
 
 def measured(n):
     v = E.VALUES.get(n)
@@ -183,7 +185,10 @@ def measured(n):
 
 def perk_row(n):
     d, sc = E.PERKS[n][0], E.PERKS[n][1]
-    nt = note(n) or E.STACKING.get(n) or E.REPORTED_ELSEWHERE.get(n)
+    nt = (note(n) or E.ANOMALIES.get(n) or E.STACKING.get(n)
+          or E.REPORTED_ELSEWHERE.get(n)
+          or ('A hold time, so a lower figure is the better one.'
+              if n in E.LOWER_IS_BETTER else None))
     extra = f'<div style="color:var(--ink-faint);font-size:13px;margin-top:5px">{e(nt)}</div>' if nt else ''
     return (f'<tr data-cat="{R.CATEGORY[n]}" '
             f'data-text="{e((n + " " + d).lower())}">'
@@ -219,7 +224,8 @@ def rate_row(n):
                (R.RARITY.index(max(vv, key=lambda t: R.RARITY.index(t)))
                 - R.RARITY.index(min(vv, key=lambda t: R.RARITY.index(t))))
                for vv in E.VALUES.values() if len(vv) > 1)
-    verdict = ('The steepest card measured. Point your upgrade here.' if r >= best - 0.1 else
+    verdict = ('Gains nothing across the step measured.' if r == 0 else
+               'The steepest card measured. Point your upgrade here.' if r >= best - 0.1 else
                'Steep. A strong upgrade target.' if r >= 8 else
                'A real gain on a card you always run.' if r >= 4 else
                'Barely moves. Roll instead of upgrading it.')
