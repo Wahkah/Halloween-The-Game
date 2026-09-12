@@ -148,7 +148,7 @@ VALUES = {
  "Guardian Shadow":       {"Common": 10, "Epic": 40},
  "Shared Desperation":    {"Common": 15, "Rare": 30, "Epic": 40},
  "Exit Strategy":         {"Common": 25, "Uncommon": 35},
- "Unphased":              {"Rare": 35},
+ "Unphased":              {"Common": 10, "Rare": 35},
  "Unwinded":              {"Common": 10, "Uncommon": 15, "Legendary": 35},
  "Repair Expert":         {"Common": 20, "Uncommon": 25, "Rare": 30},
  "Silver Tongue":         {"Common": 15, "Rare": 30},
@@ -156,24 +156,28 @@ VALUES = {
  "Aura of Awareness":     {"Common": 15, "Uncommon": 20, "Rare": 25},
  "Barricade":             {"Common": 25},
  "Frantic":               {"Uncommon": 25},
- "Brimstone Fuse":        {"Uncommon": 20},
+ "Brimstone Fuse":        {"Common": 15, "Uncommon": 20},
  "Brutal Cleave":         {"Uncommon": 15, "Rare": 20},
+ "Bullet Belt":           {"Uncommon": 20},
  "Ghost":                 {"Rare": 20},
  "Grave Footing":         {"Common": 20},
  "Lethal Pitch":          {"Uncommon": 20},
  "Panic Drive":           {"Common": 20},
  "Shield of Law":         {"Uncommon": 20},
- "Survival Rage":         {"Rare": 20},
+ "Survival Rage":         {"Common": 10, "Rare": 20},
+ "Deadshot":              {"Common": 15},
  "Fade to Black":         {"Common": 15},
+ "Iron Ankles":           {"Common": 10, "Uncommon": 15},
  "Liquid Courage":        {"Common": 5, "Uncommon": 10, "Rare": 15},
+ "Thick Skin":            {"Common": 10, "Uncommon": 15},
  "Witness State":         {"Common": 10, "Uncommon": 15},
- "Breakfall":             {"Rare": 10},
- "Clotting":              {"Uncommon": 10},
+ "Breakfall":             {"Common": 5, "Rare": 10},
+ "Clotting":              {"Common": 5, "Uncommon": 10},
  "Field Triage":          {"Common": 10},
  "Glass Walker":          {"Common": 10},
  "Hardened":              {"Common": 10},
- "Iron Ankles":           {"Common": 10},
  "Knockout":              {"Common": 10, "Uncommon": 10},
+ "Relentless Steel":      {"Common": 10},
  "Smooth Talker":         {"Common": 10},
  "Solid Foundation":      {"Common": 5, "Uncommon": 10},
  "Stubborn":              {"Common": 10},
@@ -183,6 +187,7 @@ VALUES = {
  "Contender":             {"Common": 5},
  "Trespasser":            {"Common": 5},
  "Panic Contagion":       {"Common": 2},
+ "Sixth Sense":           {"Common": 2},
  "Elusory":               {"Common": 1},
 }
 # Figures reported by outside guides rather than read off a card here. Kept separate from
@@ -220,14 +225,20 @@ STACKING_NOTE = (
  "the rest of the match with no stated cap. Four cans at tier II is 28%. Revenge is capped at "
  "five stacks, so its number is a fifth of its ceiling. Read both as a rate rather than a total, "
  "and do not rank them against the flat cards on the raw figure.")
-METRE_VALUES = {"Witness State"}
+METRE_VALUES = {"Witness State", "Sixth Sense"}
 SECOND_VALUES = {"Trespasser"}            # a hold duration, so a lower figure is better
 LOWER_IS_BETTER = {"Trespasser"}
 ANOMALIES = {
- "Knockout": "Reads 10% at both I and II. It is the only card measured that gains nothing "
-             "across a tier step, so either it stays flat through its lower half and jumps "
-             "later, or the display is rounding a small climb. Worth a look at III before "
-             "spending anything on it."}          # figure is a distance in metres, not a per cent
+ "Knockout": "Reads 10% at both I and II, and two players recorded that independently, so it "
+             "is a property of the card rather than a slip. It is the only card measured that "
+             "gains nothing across a tier step. Either it stays flat through its lower half and "
+             "jumps later, or the display is rounding a very small climb. Check III before "
+             "spending anything on it."}
+REPLICATION = (
+ "Two players have now measured overlapping sets of cards independently. Eleven readings "
+ "appear in both, and all eleven agree exactly. Nothing conflicts. That settles a question "
+ "raised earlier on this page: a card's figure at a given tier is fixed, not rolled from a "
+ "range, so one sighting of a card at a tier is the value for everyone.")          # figure is a distance in metres, not a per cent
 FLAT_CONFIRMED = {"Pied Piper": "II and V read the same",
                   "Survival Intuition": "II and III read the same as V"}
 TIER_UNCONFIRMED = {"Hardened": "reported without a tier; recorded here as I"}

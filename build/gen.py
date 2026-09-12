@@ -265,6 +265,7 @@ upgrading it is wasted.</p>
 <p>Percentages in the <b>Measured</b> column were read off the cards in game. Nothing is
 estimated: a blank means nobody has looked at that one yet.</p>
 <p>{e(E.PROVENANCE)}</p>
+<p>{e(E.REPLICATION)}</p>
 </div>
 
 <h2>Deck perks</h2>
